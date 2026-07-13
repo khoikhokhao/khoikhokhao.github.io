@@ -56,11 +56,24 @@ h1 {
 }
 
 .main-card {
-  display: block;
-  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 26px;
   text-align: left;
   background: linear-gradient(135deg, #2563eb, #7c3aed);
   box-shadow: 0 15px 40px rgba(37, 99, 235, 0.25);
+}
+
+.main-card-icon {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 25px;
 }
 
 .main-card h2 {
@@ -73,6 +86,12 @@ h1 {
   color: #e2e8f0;
 }
 
+.arrow-icon {
+  margin-left: auto;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
 .socials {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -80,19 +99,37 @@ h1 {
 }
 
 .socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+}
+
+.socials i {
+  font-size: 22px;
 }
 
 .main-card:hover,
 .socials a:hover {
   transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 @media (max-width: 650px) {
   h1 {
     font-size: 32px;
+  }
+
+  .main-card {
+    align-items: flex-start;
+  }
+
+  .arrow-icon {
+    display: none;
   }
 
   .socials {
