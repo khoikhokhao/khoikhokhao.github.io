@@ -507,3 +507,32 @@ h1 {
     transition: none !important;
   }
 }
+/* Mentoring */
+
+.mentoring {
+  grid-column: 1 / -1;
+  background: linear-gradient(125deg, #182b29, #111e22);
+  border-color: #35574d;
+}
+
+.mentoring .social-icon {
+  color: var(--accent);
+  background: rgba(118, 229, 181, 0.08);
+  border-color: #426a58;
+}
+
+.mentoring .social-copy strong {
+  color: var(--accent);
+}
+
+.mentoring .social-arrow {
+  color: var(--accent);
+}
+
+@media (hover: hover) {
+  .mentoring:hover {
+    border-color: var(--accent);
+    background: #1b302b;
+    box-shadow: 0 8px 24px rgba(118, 229, 181, 0.06);
+  }
+}
